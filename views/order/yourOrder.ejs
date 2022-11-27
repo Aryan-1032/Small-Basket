@@ -1,0 +1,83 @@
+<% layout('layouts/boilerplate')%>
+<section class="h-100" style="background-color: #eee">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">You Ordered</h3>
+         
+        </div>
+        <% if(order.products.length === 0){ %>
+            <div class="card">
+                <div class="card-body">
+                  <button type="button" class="btn btn-disabled btn-block btn-lg" >
+                    No items
+                  </button>
+                </div>
+              </div>
+            <% }else{ %>  
+        <% for(let product of order.products){ %>
+        <div class="card rounded-3 mb-4">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img
+                  src="<%= product.image %> "
+                  class="img-fluid rounded-3"
+                  alt="fruits"
+                />
+              </div>
+              
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h5 class="mb-0">$<%= product.price %></h5>
+              </div>
+              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                <a href="#!" class="text-danger"
+                  ><i class="fas fa-trash fa-lg"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+
+        <div class="card card-stepper" style="border-radius: 10px;">
+            <div class="card-body p-4">
+  
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                  <span class="lead fw-normal">Your order has been placed successfully</span>
+                </div>
+                <div>
+                  <button class="btn btn-outline-primary" type="button">Track order details</button>
+                </div>
+              </div>
+              <hr class="my-4">
+  
+              <div class="d-flex flex-row justify-content-between align-items-center align-content-center">
+                <span class="dot"></span>
+                <hr class="flex-fill track-line"><span class="dot"></span>
+                <hr class="flex-fill track-line"><span class="dot"></span>
+                <hr class="flex-fill track-line"><span class="dot"></span>
+                <hr class="flex-fill track-line"><span
+                  class="d-flex justify-content-center align-items-center big-dot dot">
+                  <i class="fa fa-check text-white"></i></span>
+              </div>
+  
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-column align-items-start"><span>15 Mar</span><span>Order placed</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center"><span>17
+                    Mar</span><span>Order Dispatched</span></div>
+                <div class="d-flex flex-column align-items-center"><span>18Mar</span><span>Out for
+                    delivery</span></div>
+                <div class="d-flex flex-column align-items-end"><span>20 Mar</span><span>Delivered</span></div>
+              </div>
+  
+            </div>
+          </div>
+        <% } %> 
+      </div>
+    </div>
+  </div>
+</section>

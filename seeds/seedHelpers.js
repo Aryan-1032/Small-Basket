@@ -1,0 +1,45 @@
+module.exports.descriptors = [
+    'Forest',
+    'Ancient',
+    'Petrified',
+    'Roaring',
+    'Cascade',
+    'Tumbling',
+    'Silent',
+    'Redwood',
+    'Bullfrog',
+    'Maple',
+    'Misty',
+    'Elk',
+    'Grizzly',
+    'Ocean',
+    'Sea',
+    'Sky',
+    'Dusty',
+    'Diamond'
+]
+
+module.exports.fruits = [
+    'Apricot',
+    'Avocado',
+    'Banana',
+    'Bilberry',
+    'Blackberry',
+    'Blackcurrant',
+    'Blueberry',
+    'Durian',
+    'Eggplant',
+    'Elderberry',
+    'Jambul',
+    'Peach',
+    'Orange',
+    'Kumquat',
+    'Spring',
+    'Pineapple',
+    'Lychee',
+    'Raspberry',
+    'Hunting Camp',
+    'Cliffs',
+    'Lemon'
+]
+
